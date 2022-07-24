@@ -59,3 +59,4 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 Microverse Inc.
+Original design idea by [Nelson Sakwa on Behance](https://www.behance.net/sakwadesignstudio).
