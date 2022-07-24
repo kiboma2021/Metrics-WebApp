@@ -1,12 +1,12 @@
 /* eslint-disable arrow-body-style */
 import React from 'react';
 
-const allNews = () => {
+const newsCategory = () => {
   return (
     <div>
-      <h1>News Category</h1>
+      <h1>All news in Kenya</h1>
     </div>
   );
 };
 
-export default allNews;
+export default newsCategory;
