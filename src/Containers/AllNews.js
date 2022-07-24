@@ -1,12 +1,15 @@
-/* eslint-disable arrow-body-style */
 import React from 'react';
+import { useSelector } from 'react-redux';
+import NewsComponent from './NewsComponents';
 
-const allNews = () => {
+const AllNews = () => {
+  const allnews = useSelector((state) => state);
+  console.log(allnews);
   return (
     <div>
-      <h1>News Category</h1>
+      <NewsComponent />
     </div>
   );
 };
 
-export default allNews;
+export default AllNews;
