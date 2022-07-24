@@ -2,14 +2,18 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 
 const NewsComponent = () => {
-  const news = useSelector((state) => state.allnews.news);
-  const { id, title, description } = news[0];
+  const news = useSelector((state) => state.allnews.news.results);
+  const renderList = news.map((n) => {
+    const { id, title, description } = n;
+    return (
+      <div key={id}>
+        <div>{title}</div>
+        <div>{description}</div>
+      </div>
+    );
+  });
   return (
-    <div key={id}>
-      <h1>News Category</h1>
-      <div>{title}</div>
-      <div>{description}</div>
-    </div>
+    <>{renderList}</>
   );
 };
 
