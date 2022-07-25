@@ -1,8 +1,12 @@
 import React from 'react';
+import { FaChevronLeft, FaCog } from 'react-icons/fa';
+import '../Styles/Header.css';
 
 const Header = () => (
-  <div>
-    <h1>World news</h1>
+  <div className="header-bar">
+    <div><FaChevronLeft /></div>
+    <h1>Kiboma Store</h1>
+    <div><FaCog /></div>
   </div>
 );
 

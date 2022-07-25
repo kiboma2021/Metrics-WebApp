@@ -4,14 +4,14 @@ import {
 } from 'react-router-dom';
 import './App.css';
 import Header from './Containers/Header';
-import AllNews from './Containers/AllNews';
+import AllProducts from './Containers/AllProducts';
 import NewsCategory from './Containers/NewsCategory';
 
 const App = () => (
   <Router>
     <Header />
     <Routes>
-      <Route path="/" element={<AllNews />} />
+      <Route path="/" element={<AllProducts />} />
       <Route path="/product/:productid" element={<NewsCategory />} />
       <Route>404 Not Found</Route>
     </Routes>

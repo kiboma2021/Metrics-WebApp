@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.image {
+  width: 30%;
+}
+
+.Home-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsla(347, 81%, 50%, 0.76);
+  color: white;
+  padding: 1rem;
+}

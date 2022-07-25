@@ -3,13 +3,13 @@
 import ActionTypes from '../Constants/action-types';
 
 const initialState = {
-  news: [],
+  products: [],
 };
 
-export const newsReducer = (state = initialState, { type, payload }) => {
+export const productsReducer = (state = initialState, { type, payload }) => {
   switch (type) {
-    case ActionTypes.ALL_NEWS:
-      return { ...state, news: payload };
+    case ActionTypes.ALL_PRODUCTS:
+      return { ...state, products: payload };
     default:
       return state;
   }

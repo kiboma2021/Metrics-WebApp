@@ -1,5 +1,5 @@
 const ActionTypes = {
-  ALL_NEWS: 'ALL_NEWS',
+  ALL_PRODUCTS: 'ALL_PRODUCTS',
   NEWS_CATEGORY: 'NEWS_CATEGORY',
 };
 
