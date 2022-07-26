@@ -7,7 +7,7 @@ import { selectedProduct } from '../Redux/Actions/productActions';
 const ProductDetail = () => {
   const product = useSelector((state) => state.product);
   const {
-    image, title, price, category, description 
+    image, title, price, category, description, rating,
   } = product;
   const { productid } = useParams();
   const dispatch = useDispatch();
@@ -29,11 +29,15 @@ const ProductDetail = () => {
         <div>...loading</div>
       ) : (
         <div>
+          <div>
+            <img src={image} alt={title} />
+          </div>
           <div>{title}</div>
           <div>{price}</div>
           <div>{category}</div>
           <div>{description}</div>
-          <div>{image}</div>
+          <div>{rating.count}</div>
+          <div>{rating.rate}</div>
         </div>
       )}
     </div>
