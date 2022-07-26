@@ -1,10 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import '../Styles/Products.css';
 
 const ProductComponent = () => {
   const products = useSelector((state) => state.products.products);
+  const [q, setQ] = useState('');
+  const [searchParam] = useState(['title']);
+
+  function search(products) {
+    return products.filter((product) => searchParam.some((newItem) => (
+      product[newItem]
+        .toString()
+        .toLowerCase()
+        .indexOf(q.toLowerCase()) > -1
+    )));
+  }
+
   return (
     <>
       <div>
@@ -15,7 +27,7 @@ const ProductComponent = () => {
       </div>
       <div className="Home-search">
         <form>
-          <input type="search" placeholder="Search Product" />
+          <input type="search" placeholder="Search Product" value={q} onChange={(e) => setQ(e.target.value)} />
         </form>
       </div>
       <div className="listProducts">
@@ -23,7 +35,7 @@ const ProductComponent = () => {
           <div><h3>...loading</h3></div>
         ) : (
           <div className="productPage">
-            { products.map((product) => (
+            { search(products).map((product) => (
               <div key={product.id} className="productCard">
                 <Link to={`/product/${product.id}`} style={{ textDecoration: 'none' }}>
                   <div className="productTitle">{ product.title }</div>
