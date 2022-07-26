@@ -1,20 +1,26 @@
-/* eslint-disable no-unused-vars */
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { selectedProduct } from '../Redux/Actions/productActions';
 
 const ProductDetail = () => {
+  const product = useSelector((state) => state.product);
   const { productid } = useParams();
   const dispatch = useDispatch();
-  console.log(productid);
+  console.log(product);
 
   const fetchProductDetail = async () => {
     const response = await axios.get(`https://fakestoreapi.com/products/${productid}`).catch((err) => {
       console.log('Err', err);
     });
-    dispatch();
+    dispatch(selectedProduct(response.data));
   };
+
+  useEffect(() => {
+    if (productid && productid !== '') fetchProductDetail();
+  }, [productid]);
+
   return (
     <div>
       <h1>

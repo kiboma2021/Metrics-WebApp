@@ -1,6 +1,6 @@
 const ActionTypes = {
   ALL_PRODUCTS: 'ALL_PRODUCTS',
-  NEWS_CATEGORY: 'NEWS_CATEGORY',
+  SELECTED_PRODUCT: 'SELECTED_PRODUCT',
 };
 
 export default ActionTypes;

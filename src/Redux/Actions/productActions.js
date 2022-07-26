@@ -5,7 +5,7 @@ export const myProducts = (products) => ({
   payload: products,
 });
 
-export const newsCategory = (category) => ({
-  type: ActionTypes.NEWS_CATEGORY,
-  payload: category,
+export const selectedProduct = (product) => ({
+  type: ActionTypes.SELECTED_PRODUCT,
+  payload: product,
 });
