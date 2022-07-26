@@ -6,9 +6,11 @@ import { selectedProduct } from '../Redux/Actions/productActions';
 
 const ProductDetail = () => {
   const product = useSelector((state) => state.product);
+  const {
+    image, title, price, category, description 
+  } = product;
   const { productid } = useParams();
   const dispatch = useDispatch();
-  console.log(product);
 
   const fetchProductDetail = async () => {
     const response = await axios.get(`https://fakestoreapi.com/products/${productid}`).catch((err) => {
@@ -23,10 +25,17 @@ const ProductDetail = () => {
 
   return (
     <div>
-      <h1>
-        All news in Kenya
-        {productid}
-      </h1>
+      {Object.keys(product).length === 0 ? (
+        <div>...loading</div>
+      ) : (
+        <div>
+          <div>{title}</div>
+          <div>{price}</div>
+          <div>{category}</div>
+          <div>{description}</div>
+          <div>{image}</div>
+        </div>
+      )}
     </div>
   );
 };
