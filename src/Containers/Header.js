@@ -1,13 +1,19 @@
 import React from 'react';
 import { FaChevronLeft, FaCog } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
 import '../Styles/Header.css';
 
-const Header = () => (
-  <div className="header-bar">
-    <div><FaChevronLeft /></div>
-    <h1>Kiboma Store</h1>
-    <div><FaCog /></div>
-  </div>
-);
+const Header = () => {
+  const navigate = useNavigate();
+  return (
+    <div className="header-bar">
+      <button onClick={() => navigate(-1)} type="button">
+        <div><FaChevronLeft /></div>
+      </button>
+      <h1>Kiboma Store</h1>
+      <div><FaCog /></div>
+    </div>
+  );
+};
 
 export default Header;
