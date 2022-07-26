@@ -18,15 +18,21 @@ const ProductComponent = () => {
           <input type="search" placeholder="Search Product" />
         </form>
       </div>
-      <div className="productPage">
-        { products.map((product) => (
-          <div key={product.id} className="productCard">
-            <Link to={`/product/${product.id}`} style={{ textDecoration: 'none' }}>
-              <div className="productTitle">{ product.title }</div>
-            </Link>
+      <div className="listProducts">
+        {Object.keys(products).length === 0 ? (
+          <div><h3>...loading</h3></div>
+        ) : (
+          <div className="productPage">
+            { products.map((product) => (
+              <div key={product.id} className="productCard">
+                <Link to={`/product/${product.id}`} style={{ textDecoration: 'none' }}>
+                  <div className="productTitle">{ product.title }</div>
+                </Link>
+              </div>
+            ))}
+            ;
           </div>
-        ))}
-        ;
+        )}
       </div>
     </>
   );

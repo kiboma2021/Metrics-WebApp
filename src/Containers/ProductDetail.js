@@ -2,7 +2,8 @@ import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import { useDispatch, useSelector } from 'react-redux';
-import { selectedProduct } from '../Redux/Actions/productActions';
+import { selectedProduct, removeSelectedProduct } from '../Redux/Actions/productActions';
+import '../Styles/ProductDetail.css';
 
 const ProductDetail = () => {
   const product = useSelector((state) => state.product);
@@ -21,24 +22,51 @@ const ProductDetail = () => {
 
   useEffect(() => {
     if (productid && productid !== '') fetchProductDetail();
+    return () => {
+      dispatch(removeSelectedProduct());
+    };
   }, [productid]);
 
   return (
-    <div>
+    <div className="DetailsPage">
       {Object.keys(product).length === 0 ? (
-        <div>...loading</div>
+        <div><h3>...loading</h3></div>
       ) : (
-        <div>
+        <>
           <div>
-            <img src={image} alt={title} />
+            <h2 className="Home-header">
+              {title}
+            </h2>
           </div>
-          <div>{title}</div>
-          <div>{price}</div>
-          <div>{category}</div>
-          <div>{description}</div>
-          <div>{rating.count}</div>
-          <div>{rating.rate}</div>
-        </div>
+          <div className="productDetail">
+            <div className="image">
+              <img className="image" src={image} alt={title} />
+            </div>
+            <div className="productDescription">
+              <div className="productDescription">
+                Category:
+                {category}
+              </div>
+              <div className="productDescription">
+                Product Description:
+                {description}
+              </div>
+              <div className="productDescription">
+                Price:
+                $
+                {price}
+              </div>
+              <div className="productDescription">
+                Count:
+                {rating.count}
+              </div>
+              <div className="productDescription">
+                Rating:
+                {rating.rate}
+              </div>
+            </div>
+          </div>
+        </>
       )}
     </div>
   );
