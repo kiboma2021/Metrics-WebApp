@@ -4,7 +4,9 @@
 }
 
 .image {
-  width: 30%;
+  width: 100%;
+  height: 80%;
+  border-radius: 5px;
 }
 
 .Home-header {
@@ -14,4 +16,45 @@
   background-color: hsla(347, 81%, 50%, 0.76);
   color: white;
   padding: 1rem;
+}
+
+.Home-search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsla(337, 81%, 50%, 0.76);
+  padding: 0.5rem;
+}
+
+input {
+  height: 2rem;
+  border-radius: 5px;
+  padding: 1rem;
+}
+
+.productPage{
+  display: grid;
+  grid-template-columns: repeat(1, 50%);
+  justify-content: center;
+  padding: 1rem;
+  background-color: hsla(337, 81%, 50%, 0.76);
+}
+
+.productCard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: hsla(337, 81%, 50%, 0.76);
+  height: 5rem;
+  border: 1px solid black;
+}
+
+.productCard:nth-child(odd) {
+  background-color: hsla(347, 81%, 50%, 0.76);
+}
+
+.productTitle {
+  color: white;
+  font-size: 1.2rem;
 }

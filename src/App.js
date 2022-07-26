@@ -5,7 +5,7 @@ import {
 import './App.css';
 import Header from './Containers/Header';
 import AllProducts from './Containers/AllProducts';
-import NewsCategory from './Containers/NewsCategory';
+import NewsCategory from './Containers/ProductDetail';
 
 const App = () => (
   <Router>

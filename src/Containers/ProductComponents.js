@@ -18,21 +18,11 @@ const ProductComponent = () => {
           <input type="search" placeholder="Search Product" />
         </form>
       </div>
-      <div className="productCard">
+      <div className="productPage">
         { products.map((product) => (
-          <div key={product.id}>
-            <Link to={`/product/${product.id}`}>
-              <div className="image">
-                <img className="image" src={product.image} alt={product.title} />
-              </div>
-              <div className="content">
-                <div className="header">{ product.title }</div>
-                <div className="price">
-                  $
-                  { product.price }
-                </div>
-                <div className="meta">{ product.category }</div>
-              </div>
+          <div key={product.id} className="productCard">
+            <Link to={`/product/${product.id}`} style={{ textDecoration: 'none' }}>
+              <div className="productTitle">{ product.title }</div>
             </Link>
           </div>
         ))}
