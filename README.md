@@ -76,5 +76,4 @@ Give a ⭐️ if you like this project!
 - Original design idea by [Nelson Sakwa on Behance](https://www.behance.net/sakwadesignstudio).
 - [creativecommons license](https://creativecommons.org/licenses/by-nc/4.0/)
 - Photo by <a href="https://unsplash.com/@moritzgrf?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Moritz Graf</a> on <a href="https://unsplash.com/s/photos/red-bull-f1?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-- <a href="https://www.flaticon.com/free-icons/racing-car" title="racing car icons">Racing car icons created by Freepik - Flaticon</a>
-- <a href="https://www.flaticon.com/free-icons/trophy" title="trophy icons">Trophy icons created by Smashicons - Flaticon</a>
+
