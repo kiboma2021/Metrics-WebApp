@@ -28,7 +28,7 @@ input {
 
 .productPage{
   display: grid;
-  grid-template-columns: repeat(1, 50%);
+  grid-template-columns: repeat(2, 50%);
   justify-content: center;
   padding: 1rem;
   background-color: hsla(337, 81%, 50%, 0.76);
@@ -44,8 +44,20 @@ input {
   border: 1px solid black;
 }
 
-.productCard:nth-child(odd) {
-  background-color: hsla(347, 81%, 50%, 0.76);
+.productCard:nth-child(2n) {
+  background-color: hsla(317, 81%, 50%, 0.76);
+}
+
+.productCard:nth-child(3n) {
+  background-color: rgba(145, 11, 11, 0.6);
+}
+
+.productCard:nth-child(4n) {
+  background-color: hsla(0, 81%, 50%, 0.76);
+}
+
+.productCard:nth-child(5n) {
+  background-color: hsla(332, 81%, 50%, 0.76);
 }
 
 .productTitle {
