@@ -20,6 +20,9 @@ This React capstone project is about building a mobile web application to check 
 ## Deployment:
  https://kiboma-metrics-app.herokuapp.com/
 
+## Video Link:
+https://youtu.be/VD9Z8Febpm4
+
 ## Getting Started
 
 To clone this project:
