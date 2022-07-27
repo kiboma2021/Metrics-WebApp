@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
+import { FaArrowRight } from 'react-icons/fa';
 import '../Styles/Products.css';
 
 const ProductComponent = () => {
@@ -38,10 +39,15 @@ const ProductComponent = () => {
             { search(products).map((product) => (
               <div key={product.id} className="productCard">
                 <Link to={`/product/${product.id}`} style={{ textDecoration: 'none' }}>
-                  <div>
-                    <img className="products-image" src={product.image} alt={product.title} />
+                  <div className="fowardArrowSect">
+                    <div className="fowardArrow"><FaArrowRight /></div>
                   </div>
-                  <div className="productTitle">{ product.title }</div>
+                  <div className="productCard1">
+                    <div>
+                      <img className="products-image" src={product.image} alt={product.title} />
+                    </div>
+                    <div className="productTitle">{ product.title }</div>
+                  </div>
                 </Link>
               </div>
             ))}

@@ -36,15 +36,20 @@ input {
 
 .products-image {
   width: 5rem;
+  height: 7rem;
 }
 
 .productCard {
+  background-color: hsla(337, 81%, 50%, 0.76);
+  border: 1px solid black;
+}
+
+.productCard1 {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-color: hsla(337, 81%, 50%, 0.76);
-  border: 1px solid black;
 }
 
 .productCard:nth-child(2n) {
@@ -66,4 +71,16 @@ input {
 .productTitle {
   color: white;
   font-size: 1.2rem;
+}
+
+.fowardArrowSect {
+  padding-right: 2rem;
+}
+
+.fowardArrow {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  font-size: 1.5rem;
+  color: white;
 }
