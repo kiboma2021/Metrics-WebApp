@@ -2,6 +2,11 @@
 
 This React capstone project is about building a mobile web application to check a list of metrics (numeric values) from an API.
 
+![Metrics-Screen](https://user-images.githubusercontent.com/93031593/181368521-3718d06c-5587-4c08-baa3-267d9a938efd.png)
+
+![Metrics-Screen2](https://user-images.githubusercontent.com/93031593/181368577-400b018d-22ea-4a35-bbe6-77394b626c72.png)
+
+
 ## Built With
 
 - Create React App (CRA)
