@@ -38,6 +38,9 @@ const ProductComponent = () => {
             { search(products).map((product) => (
               <div key={product.id} className="productCard">
                 <Link to={`/product/${product.id}`} style={{ textDecoration: 'none' }}>
+                  <div>
+                    <img className="products-image" src={product.image} alt={product.title} />
+                  </div>
                   <div className="productTitle">{ product.title }</div>
                 </Link>
               </div>

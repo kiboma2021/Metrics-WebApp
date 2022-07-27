@@ -33,15 +33,15 @@ const ProductDetail = () => {
         <div><h3>...loading</h3></div>
       ) : (
         <>
-          <div>
-            <h2 className="Home-header">
+          <div className="Home-header">
+            <div className="image">
+              <img className="image" src={image} alt={title} />
+            </div>
+            <h2>
               {title}
             </h2>
           </div>
           <div className="productDetail">
-            <div className="image">
-              <img className="image" src={image} alt={title} />
-            </div>
             <div className="productDescription">
               <div className="productDescription">
                 Category:

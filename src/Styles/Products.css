@@ -34,13 +34,16 @@ input {
   background-color: hsla(337, 81%, 50%, 0.76);
 }
 
+.products-image {
+  width: 5rem;
+}
+
 .productCard {
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   background-color: hsla(337, 81%, 50%, 0.76);
-  height: 5rem;
   border: 1px solid black;
 }
 
